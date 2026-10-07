@@ -1,42 +1,36 @@
-# TaskFlow
+# TaskFlow ✦
 
-A task management application built with React and TypeScript.
+A task management app built with React, TypeScript and Vite.
 
-> Status: In development. This repository currently contains
-> the project plan; application code will be added next.
+[Open live demo](https://annasafonovaa.github.io/taskflow/)
 
-## Overview
-
-TaskFlow is designed to help users organise daily tasks,
-set priorities and track progress through a simple interface.
-
-## Planned features
+## Features
 
 - Create, edit and delete tasks
-- Move tasks between To Do, In Progress and Done
-- Set task priorities and due dates
-- Search and filter tasks
-- Save tasks locally between sessions
-- Use the app on desktop and mobile
+- Organise tasks into To Do, In Progress and Done
+- Set priorities and due dates
+- Search tasks and filter by priority
+- Save tasks in the browser using localStorage
+- Responsive layout for desktop and mobile
 
-## Planned tech stack
+## Tech stack
 
-- React
-- TypeScript
-- Vite
-- CSS
-- Browser localStorage
+React · TypeScript · Vite · CSS
 
-## Development roadmap
+## Run locally
 
-- [x] Define the project scope
-- [ ] Build the task board
-- [ ] Add task creation and editing
-- [ ] Implement search and filters
-- [ ] Add local storage
-- [ ] Test the main user flows
-- [ ] Publish a live demo
+    npm install
+    npm run dev
 
-## Running locally
+## Build
 
-Setup instructions will be added with the first working version.
+    npm run build
+
+## Data storage
+
+Tasks are saved in the current browser. They are not synced
+between devices or browsers.
+
+## Author
+
+[Anna Safonova](https://github.com/annasafonovaa)
