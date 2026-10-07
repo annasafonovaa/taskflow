@@ -1,0 +1,309 @@
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #24352f;
+  background: #f5f6f2;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+input,
+select,
+button {
+  min-height: 44px;
+  border: 1px solid #cbd5cd;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: white;
+  color: #24352f;
+}
+
+input,
+select {
+  min-width: 0;
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid #589d7b;
+  outline-offset: 3px;
+}
+
+button:hover {
+  background: #edf3ed;
+}
+
+.workspace {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 28px 28px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #586c60;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(36px, 6vw, 56px);
+  letter-spacing: -2px;
+}
+
+h1 span {
+  margin-left: 12px;
+  color: #507e59;
+}
+
+.header p:last-child {
+  color: #647268;
+}
+
+.summary {
+  display: grid;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 20px 28px;
+  background: #e5eddf;
+  border-radius: 18px;
+}
+
+.summary strong {
+  font-size: 28px;
+}
+
+.summary span {
+  font-size: 13px;
+  color: #53634f;
+}
+
+.task-form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid #dce3d9;
+  border-radius: 18px;
+  background: white;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.title-field {
+  flex: 1 1 250px;
+}
+
+.primary {
+  background: #294e3d;
+  color: white;
+  border-color: #294e3d;
+  font-weight: 600;
+}
+
+.primary:hover {
+  background: #1d3c2d;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin: 28px 0 20px;
+}
+
+.toolbar input {
+  flex: 1;
+}
+
+.toolbar select {
+  width: 180px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.column {
+  min-height: 280px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #e9ede7;
+}
+
+.column h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+
+.count {
+  display: grid;
+  place-items: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: white;
+  font-size: 12px;
+}
+
+.task-card {
+  margin-bottom: 14px;
+  padding: 18px;
+  border: 1px solid #dce3d9;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 8px #24352f05;
+}
+
+.task-card h3 {
+  margin: 14px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.low {
+  color: #2e6249;
+  background: #e3f0e7;
+}
+
+.medium {
+  color: #805d1c;
+  background: #fbefcf;
+}
+
+.high {
+  color: #9a3e36;
+  background: #fbe6e2;
+}
+
+.due,
+.empty {
+  color: #657267;
+  font-size: 13px;
+}
+
+.empty {
+  padding: 28px 0;
+  text-align: center;
+}
+
+.status-label {
+  margin-top: 18px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card-actions button {
+  flex: 1;
+  font-size: 12px;
+}
+
+.delete {
+  color: #9a3e36;
+}
+
+footer {
+  margin-top: 36px;
+  color: #657267;
+  text-align: center;
+  font-size: 12px;
+}
+
+[role="alert"] {
+  padding: 14px;
+  background: #fbefcf;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  .column {
+    min-height: 160px;
+  }
+}
+
+@media (max-width: 520px) {
+  .workspace {
+    padding: 28px 16px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary {
+    width: 100%;
+  }
+
+  .task-form {
+    padding: 18px;
+  }
+
+  .task-form label,
+  .task-form button {
+    width: 100%;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar select {
+    width: 100%;
+  }
+}
